@@ -11,5 +11,9 @@ var sport = {
   ],
   playerNames: function () {
     // YOUR CODE HERE
+    return this.players.map((item) => {
+      return `${item.name} plays ${this.name}`
+    })
   }
 };
+console.log(sport.playerNames());

@@ -1,4 +1,22 @@
 // YOUR CODE HERE
+var FishTable = (props)  => (
+  <div>
+    {props.fishes.map((fish, index) =>
+      <FishTableRow fish={fish} key={index}/>
+    )}
+  </div>
+);
+
+// class FishTable extends React.Component {
+//   render (props) {
+//     return (
+//       {props.fishes.map((fish, index) => {
+//       <FishTableRow fish={fish} key={index}/>
+//     }) 
+//   }
+//     );
+//   }
+// }
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated

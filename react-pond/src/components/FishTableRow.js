@@ -1,10 +1,25 @@
 // YOUR CODE HERE
+class FishTableRow extends React.Component {
+  constructor (props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <b>{this.props.fish.name}</b>
+        <p>{this.props.fish.description}</p>
+        <img src={this.props.fish.image}/><br/>
+        *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+      </div>
+    );
+  }
+}
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
-FishTable.propTypes = {
-  fishes: React.PropTypes.array.isRequired
-};
+// FishTable.propTypes = {
+//   fishes: React.PropTypes.array.isRequired
+// };
 
 //
 

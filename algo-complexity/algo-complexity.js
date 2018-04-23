@@ -9,6 +9,7 @@
 
 /*
  Complexity:
+ This function has linear time complexity, because the for loop means that the function is iterating over all n items in the key.
  */
 
 
@@ -25,7 +26,7 @@ var retrieve = function(key){
 // Problem 2: sortedArrayContainsItem
 
 /*
- Complexity:
+ Complexity: This function has logarithmic time complexity, because line 39 means that the function is doing a binary search by splitting in half and comparing values, and then splitting in half again, repeating until the target is found.
  */
 
 
@@ -43,7 +44,7 @@ var sortedArrayContainsItem = function(array, item){
 // Problem 3: hasDuplicates
 
 /*
- Complexity:
+ Complexity: This function has quadratic time complexity, because line 53 means that it's iterating once, and 55 means that it's iterating the rest of the array after that index once again.
  */
 
 
@@ -51,7 +52,7 @@ var sortedArrayContainsItem = function(array, item){
 var hasDuplicates = function(array){
   for(var i = 0; i < array.length; i++){
     var item = array[i];
-    if(array.slice(i+1).indexOf(item) !== -1){
+    if(array.slice(i+1).indexOf(item) !== -1){ //있으면
       return true;
     }
   }

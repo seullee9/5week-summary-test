@@ -1,5 +1,41 @@
-<!--
-  CODE GOES HERE
-  Don't forget newlines at the end of all files :)
--->
+<!-- ## HTML/CSS
+  * [ ] Create a basic HTML page with a text input & a submit button below it, both of which are centered (similar to the home page of Google). Do not use the `center` tag.
+  * [ ] Clicking the button should result in the text value from the input box being logged to the console. -->
+  
+  <!--
+    CODE GOES HERE
+    Don't forget newlines at the end of all files :)
+  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Page :)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  </head>
+  <body>
+    <div id='centerdis'>
+      <input class='center' id='inputt' type='text'>
+      <br/>
+      <button class='center' id='submitt' type='submit'>Submit</button>
+    </div>
+  </body>
+  <style>
+    #centerdis {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      $('#submitt').click(function() {
+        var inputVal = $('#inputt').val()
+        console.log(inputVal);
+      })
+    });
+  </script>
+</html>
+  
 
+<!-- https://www.designernews.co/comments/146166 -->
+<!-- https://css-tricks.com/forums/topic/centering-absolutely-positioned-elements-with-left-50-and-33-left-margin/ -->
